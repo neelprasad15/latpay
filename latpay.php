@@ -8,6 +8,7 @@
  * @link      https://www.latpay.com.au/
  *
  */
+
 if (!defined('_PS_VERSION_')) {
     exit;
 }

@@ -1,14 +1,14 @@
 <?php
 /**
  *
- * Latpay - A Sample Payment Module for PrestaShop 1.7
+ * @author    Latpay Team
+ * @copyright Copyright (c) Latpay
+ * @license   Addons PrestaShop license limitation
+ * @version   1.0.0
+ * @link      https://www.latpay.com.au/
  *
- * Order Validation Controller
- *
- * @author Latpay Team
- * @copyright 2007-2019 PrestaShop SA
- * @license https://opensource.org/licenses/afl-3.0.php 
  */
+
 class LatpayValidationModuleFrontController extends ModuleFrontController
 {
     public function postProcess()
