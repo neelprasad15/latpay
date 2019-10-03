@@ -230,8 +230,8 @@ class Latpay extends PaymentModule
         $email = $customer->email;
         $phone = $address->phone;
         $city = $address->city;
-        $id_currency = intval(Configuration::get('PS_CURRENCY_DEFAULT'));
-        $currency = new Currency(intval($id_currency));
+        $id_currency = Configuration::get('PS_CURRENCY_DEFAULT');
+        $currency = new Currency($id_currency);
         $currency_code =$currency->iso_code;
         $orderAmount =number_format(Tools::convertPrice($cart->getOrderTotal(), $currency) , 2, '.', '');
         $return_url = $this->context->link->getModuleLink($this->name, 'validation', array(), true);
