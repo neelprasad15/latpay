@@ -7,8 +7,7 @@
  *
  * @author Latpay Team
  * @copyright 2007-2019 PrestaShop SA
- * @license https://opensource.org/licenses/afl-3.0.php
- */
+ * @license https://opensource.org/licenses/afl-3.0.php */
 class LatpayValidationModuleFrontController extends ModuleFrontController
 {
     public function postProcess()
@@ -49,10 +48,9 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
         /**
          * Place the order
          */
-        if ($_POST)
-        {
+        if ($_POST) {
             $Status = Tools::getValue("Status");
-            if ($Status=='00'){
+            if ($Status=='00') {
                 $this->module->validateOrder(
                     (int) $this->context->cart->id,
                     Configuration::get('PS_OS_PAYMENT'),
