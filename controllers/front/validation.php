@@ -49,10 +49,10 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
         /**
          * Place the order
          */
-        if ($_POST) 
+        if ($_POST)
         {
             $Status = Tools::getValue("Status");
-            if ($Status=='00') 
+            if ($Status=='00')
             {
                 $this->module->validateOrder(
                     (int) $this->context->cart->id,
@@ -67,8 +67,7 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
                 );
                 Tools::redirect('index.php?controller=order-confirmation&id_cart='.(int)$cart->id.'&id_module='.(int)$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key);
             }
-            
-            else if ($Status=='05') 
+            else if ($Status=='05')
             {
                 $this->module->validateOrder(
                     (int) $this->context->cart->id,
@@ -81,15 +80,14 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
                     false,
                     $customer->secure_key
                 );
-                      $cart_id = (int)$this->context->cart->id;  
+                $cart_id = (int)$this->context->cart->id;  
                       $this->context->cart = new Cart($cart_id);
                       $duplicated_cart = $this->context->cart->duplicate();
                       $this->context->cart = $duplicated_cart['cart'];
                       $this->context->cookie->id_cart = (int)$this->context->cart->id;
                 Tools::redirect('index.php?controller=order&step=1');
             }
-
-            else if ($Status=='92') 
+            else if ($Status=='92')
             {
                 // $this->module->validateOrder(
                 //     (int) $this->context->cart->id,
