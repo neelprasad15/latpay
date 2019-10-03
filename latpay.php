@@ -275,7 +275,7 @@ class Latpay extends PaymentModule
                 'type' => 'hidden',
                 'value' => $v,
             );
-        }   
+        }
         return $inputs;
     }
    
