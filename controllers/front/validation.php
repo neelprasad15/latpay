@@ -75,7 +75,7 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
                     false,
                     $customer->secure_key
                 );
-                $cart_id = (int)$this->context->cart->id;  
+                      $cart_id = (int)$this->context->cart->id;   
                       $this->context->cart = new Cart($cart_id);
                       $duplicated_cart = $this->context->cart->duplicate();
                       $this->context->cart = $duplicated_cart['cart'];
