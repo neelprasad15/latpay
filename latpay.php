@@ -215,7 +215,7 @@ class Latpay extends PaymentModule
     }
     protected function payInput()
     {
-        global $cart;
+        $cart = $this->context->cart;
         $merchant_id = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_ID');
         $merchant_pw = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_PASSWORD');
         $Secret_Key = Configuration::get('LATPAY_HPS_ACCOUNT_SECRET_KEY');
