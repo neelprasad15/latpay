@@ -14,8 +14,8 @@ if (!defined('_PS_VERSION_')) {
 }
 class Latpay extends PaymentModule
 {
-    private $_html = '';
-    private $_postErrors = array();
+    private $html = '';
+    private $postErrors = array();
     public $address;
     /**
      * latpay constructor.
@@ -268,8 +268,7 @@ class Latpay extends PaymentModule
             'cancelurl'=> $curl,         
         );
         $inputs = array();
-        foreach ($values as $k => $v)
-        {
+        foreach ($values as $k => $v) {
             $inputs[$k] = array(
                 'name' => $k,
                 'type' => 'hidden',

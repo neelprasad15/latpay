@@ -63,7 +63,7 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
                     $customer->secure_key
                 );
                 Tools::redirect('index.php?controller=order-confirmation&id_cart='.(int)$cart->id.'&id_module='.(int)$this->module->id.'&id_order='.$this->module->currentOrder.'&key='.$customer->secure_key);
-            } else if ($Status=='05') {
+            } elseif ($Status=='05') {
                 $this->module->validateOrder(
                     (int) $this->context->cart->id,
                     Configuration::get('PS_OS_ERROR'),
@@ -81,7 +81,7 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
                       $this->context->cart = $duplicated_cart['cart'];
                       $this->context->cookie->id_cart = (int)$this->context->cart->id;
                 Tools::redirect('index.php?controller=order&step=1');
-            } else if ($Status=='92') {
+            } elseif ($Status=='92') {
                 // $this->module->validateOrder(
                 //     (int) $this->context->cart->id,
                 //     Configuration::get('PS_OS_CANCELED'),
