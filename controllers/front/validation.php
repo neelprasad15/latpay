@@ -8,6 +8,7 @@
  * @author Latpay Team
  * @copyright 2007-2019 PrestaShop SA
  * @license https://opensource.org/licenses/afl-3.0.php 
+ *
  */
 class LatpayValidationModuleFrontController extends ModuleFrontController
 {
@@ -50,7 +51,7 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
          * Place the order
          */
         if ($_POST) {
-          $cart_id = (int)$this->context->cart->id;
+$cart_id = (int)$this->context->cart->id;
             $Status = Tools::getValue("Status");
             if ($Status=='00') {
                 $this->module->validateOrder(
