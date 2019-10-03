@@ -7,7 +7,8 @@
  *
  * @author Latpay Team
  * @copyright 2007-2019 PrestaShop SA
- * 
+ * @license https://opensource.org/licenses/afl-3.0.php 
+ *
  */
 class LatpayValidationModuleFrontController extends ModuleFrontController
 {
