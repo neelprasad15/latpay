@@ -218,8 +218,7 @@ class Latpay extends PaymentModule
         $cart = $this->context->cart;
         $merchant_id = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_ID');
         $merchant_pw = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_PASSWORD');
-        $Secret_Key = Configuration::get('LATPAY_HPS_ACCOUNT_SECRET_KEY');
-        //$purchase_summary = Configuration::get('LATPAY_HPS_ACCOUNT_PURCHAS_SUMMARY');        
+        $Secret_Key = Configuration::get('LATPAY_HPS_ACCOUNT_SECRET_KEY');        
         $customer = new Customer($cart->id_customer);
         $address = new Address($cart->id_address_invoice);
         $state = new State($address->id_state);
