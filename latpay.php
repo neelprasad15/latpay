@@ -249,7 +249,7 @@ class Latpay extends PaymentModule
             'currencydesc'=> $currency_code,
             'merchant_ref_number'=> $orderId,
             'customer_ipaddress'=> $customer_ipaddress,
-            'amount'=> $orderAmount,           
+            'amount'=> $orderAmount,            
             'productinfo'=> $productInfo,
             'customer_firstname'=> $firstName,
             'customer_lastname'=> $lastName,
@@ -265,16 +265,13 @@ class Latpay extends PaymentModule
             'transactionkey'=> $str,
             'processurl'=> $purl,
             'notifyurl'=> $nurl,
-            'cancelurl'=> $curl,         
-        );
+            'cancelurl'=> $curl,);
         $inputs = array();
         foreach ($values as $k => $v) {
             $inputs[$k] = array(
                 'name' => $k,
                 'type' => 'hidden',
-                'value' => $v,                      
-            );  
-        }   
+                'value' => $v,);}   
         return $inputs;
     }
      /**
