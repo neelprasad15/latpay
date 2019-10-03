@@ -51,8 +51,8 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
          * Place the order
          */
         if ($_POST) {
-$cart_id = (int)$this->context->cart->id;
             $Status = Tools::getValue("Status");
+            $cart_id = (int)$this->context->cart->id;
             if ($Status=='00') {
                 $this->module->validateOrder(
                     (int) $this->context->cart->id,
