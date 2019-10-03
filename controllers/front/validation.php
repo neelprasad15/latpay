@@ -27,7 +27,7 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
             Tools::redirect('index.php?controller=order&step=1');
         }
         /**
-         * Verify if this payment module is authorized
+         * Verify if this payment modules is authorized
          */
         foreach (Module::getPaymentModules() as $module) {
             if ($module['name'] == 'latpay') {
