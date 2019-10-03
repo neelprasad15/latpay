@@ -265,7 +265,9 @@ class Latpay extends PaymentModule
             'transactionkey'=> $str,
             'processurl'=> $purl,
             'notifyurl'=> $nurl,
-            'cancelurl'=> $curl,);
+            'cancelurl'=> $curl,
+        );
+
         $inputs = array();
         foreach ($values as $k => $v) {
             $inputs[$k] = array(
