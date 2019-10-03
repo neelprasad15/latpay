@@ -279,8 +279,7 @@ class Latpay extends PaymentModule
         return $inputs;
     }
      /**
-     * Display a message in the paymentReturn hook
-     * 
+     * Display a message in the paymentReturn hook         
      * @param array $params
      * @return string
      */
