@@ -219,7 +219,7 @@ class Latpay extends PaymentModule
         $merchant_id = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_ID');
         $merchant_pw = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_PASSWORD');
         $Secret_Key = Configuration::get('LATPAY_HPS_ACCOUNT_SECRET_KEY');
-        $purchase_summary = Configuration::get('LATPAY_HPS_ACCOUNT_PURCHAS_SUMMARY');        
+        //$purchase_summary = Configuration::get('LATPAY_HPS_ACCOUNT_PURCHAS_SUMMARY');        
         $customer = new Customer($cart->id_customer);
         $address = new Address($cart->id_address_invoice);
         $state = new State($address->id_state);
@@ -245,7 +245,7 @@ class Latpay extends PaymentModule
         $values  = array(
             'Merchant_User_Id'=> $merchant_id,
             'merchantpwd'=> $merchant_pw,
-            'Purchase_summary'=> $purchase_summary,
+            //'Purchase_summary'=> $purchase_summary,
             'currencydesc'=> $currency_code,
             'merchant_ref_number'=> $orderId,
             'customer_ipaddress'=> $customer_ipaddress,
