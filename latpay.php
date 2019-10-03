@@ -1,5 +1,14 @@
 <?php
-
+/**
+ *
+ * LatPay - A Sample Payment Module for PrestaShop 1.7
+ *
+ * This file is the declaration of the module.
+ *
+ * @author Latpay Team
+ * @copyright 2007-2019 PrestaShop SA
+ * @license https://opensource.org/licenses/afl-3.0.php
+ */
 if (!defined('_PS_VERSION_')) {
     exit;
 }
