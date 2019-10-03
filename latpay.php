@@ -244,8 +244,7 @@ class Latpay extends PaymentModule
         $customer_ipaddress = $_SERVER['REMOTE_ADDR'];
         $values  = array(
             'Merchant_User_Id'=> $merchant_id,
-            'merchantpwd'=> $merchant_pw,
-            //'Purchase_summary'=> $purchase_summary,
+            'merchantpwd'=> $merchant_pw,            
             'currencydesc'=> $currency_code,
             'merchant_ref_number'=> $orderId,
             'customer_ipaddress'=> $customer_ipaddress,
