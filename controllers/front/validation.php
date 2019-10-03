@@ -7,7 +7,8 @@
  *
  * @author Latpay Team
  * @copyright 2007-2019 PrestaShop SA
- * @license https://opensource.org/licenses/afl-3.0.php */
+ * @license https://opensource.org/licenses/afl-3.0.php 
+ */
 class LatpayValidationModuleFrontController extends ModuleFrontController
 {
     public function postProcess()
@@ -49,6 +50,7 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
          * Place the order
          */
         if ($_POST) {
+          $cart_id = (int)$this->context->cart->id;
             $Status = Tools::getValue("Status");
             if ($Status=='00') {
                 $this->module->validateOrder(
@@ -75,7 +77,6 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
                     false,
                     $customer->secure_key
                 );
-                      $cart_id = (int)$this->context->cart->id;   
                       $this->context->cart = new Cart($cart_id);
                       $duplicated_cart = $this->context->cart->duplicate();
                       $this->context->cart = $duplicated_cart['cart'];
@@ -93,7 +94,6 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
                 //     false,
                 //     $customer->secure_key
                 // );
-                      $cart_id = (int)$this->context->cart->id;  
                       $this->context->cart = new Cart($cart_id);
                       $duplicated_cart = $this->context->cart->duplicate();
                       $this->context->cart = $duplicated_cart['cart'];
