@@ -279,14 +279,14 @@ class Latpay extends PaymentModule
         return $inputs;
     }
    
-    public function hookPaymentReturn($params)
-    {
-        /**
-         * Verify if this module is enabled
-         */
-        if (!$this->active) {
-            return;
-        }
-        return $this->fetch('module:latpay/views/templates/hook/payment_return.tpl');
-    }
+    // public function hookPaymentReturn($params)
+    // {
+    //     /**
+    //      * Verify if this module is enabled
+    //      */
+    //     if (!$this->active) {
+    //         return;
+    //     }
+    //     return $this->fetch('module:latpay/views/templates/hook/payment_return.tpl');
+    // }
 }
