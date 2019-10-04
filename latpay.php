@@ -167,7 +167,7 @@ class Latpay extends PaymentModule
             'LATPAY_HPS_LIVE_MODE' => Configuration::get('LATPAY_HPS_LIVE_MODE', true),
             'LATPAY_HPS_ACCOUNT_MERCHANT_ID' => Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_ID', true),
             'LATPAY_HPS_ACCOUNT_MERCHANT_PASSWORD' => Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_PASSWORD', true),
-            'LATPAY_HPS_ACCOUNT_SECRET_KEY' => Configuration::get('LATPAY_HPS_ACCOUNT_SECRET_KEY', true),            
+            'LATPAY_HPS_ACCOUNT_SECRET_KEY' => Configuration::get('LATPAY_HPS_ACCOUNT_SECRET_KEY', true),
         );
     }
     /**
@@ -208,7 +208,7 @@ class Latpay extends PaymentModule
     protected function payInput()
     {
         $cart = $this->context->cart;
-        $merchant_id = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_ID');        
+        $merchant_id = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_ID');
         $merchant_pw = Configuration::get('LATPAY_HPS_ACCOUNT_MERCHANT_PASSWORD');
         $Secret_Key = Configuration::get('LATPAY_HPS_ACCOUNT_SECRET_KEY');
         $customer = new Customer($cart->id_customer);
@@ -235,7 +235,7 @@ class Latpay extends PaymentModule
         $customer_ipaddress = $_SERVER['REMOTE_ADDR'];
         $values  = array(
             'Merchant_User_Id'=> $merchant_id,
-            'merchantpwd'=> $merchant_pw,            
+            'merchantpwd'=> $merchant_pw,
             'currencydesc'=> $currency_code,
             'merchant_ref_number'=> $orderId,
             'customer_ipaddress'=> $customer_ipaddress,
