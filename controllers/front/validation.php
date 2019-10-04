@@ -99,6 +99,23 @@ class LatpayValidationModuleFrontController extends ModuleFrontController
                       $this->context->cart = $duplicated_cart['cart'];
                       $this->context->cookie->id_cart = (int)$this->context->cart->id;
                 Tools::redirect('index.php?controller=order&step=1');
+            } elseif ($Status>'92') {
+                $this->module->validateOrder(
+                    (int) $this->context->cart->id,
+                    Configuration::get('PS_OS_ERROR'),
+                    (float) $this->context->cart->getOrderTotal(true, Cart::BOTH),
+                    $this->module->displayName,
+                    null,
+                    null,
+                    (int) $this->context->currency->id,
+                    false,
+                    $customer->secure_key
+                );
+                      $this->context->cart = new Cart($cart_id);
+                      $duplicated_cart = $this->context->cart->duplicate();
+                      $this->context->cart = $duplicated_cart['cart'];
+                      $this->context->cookie->id_cart = (int)$this->context->cart->id;
+                Tools::redirect('index.php?controller=order&step=1');
             }
         }
     }
