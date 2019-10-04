@@ -238,6 +238,7 @@ class Latpay extends PaymentModule
             'merchantpwd'=> $merchant_pw,
             'currencydesc'=> $currency_code,
             'merchant_ref_number'=> $orderId,
+            'Purchase_summary'=> $orderId,
             'customer_ipaddress'=> $customer_ipaddress,
             'amount'=> $orderAmount,
             'productinfo'=> $productInfo,
